@@ -7,7 +7,7 @@ This repository contains an in-depth analysis of sales data, customer behavior, 
  **Analysis Sections**
 
 1. **Sales Analysis**
-   - Identify the highest selling products in terms of total sales and quantity.
+   - Identify the highest-selling products in terms of total sales and quantity.
    - Determine the product categories and sub-categories contributing the most and least to sales.
    - Explore specific customer segments and regions driving higher sales.
 
@@ -44,10 +44,7 @@ Based on the analysis, actionable recommendations have been provided in each sec
 2. Explore the data dictionary and entity relationship diagram in the Report file.
 3. Implement the recommended strategies in your business operations.
 
- Additional Resources
 
-- Data Dictionary and ERD: [Data Dictionary and ERD](https://drive.google.com/drive/folders/1K7ECtTcV5FOfRQDvZmxAEz0qd7auhXaY)
-- Raw Data: [Raw Data](link_to_raw_data)
 
  **Feedback**
 
