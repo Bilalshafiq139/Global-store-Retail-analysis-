@@ -1,11 +1,10 @@
 
- Sales and Business Insights Analysis
+ **Sales and Business Insights Analysis**
 
- Overview
-
+ **Overview**
 This repository contains an in-depth analysis of sales data, customer behavior, and market trends, aiming to provide valuable insights for strategic decision-making within the company.
 
- Analysis Sections
+ **Analysis Sections**
 
 1. **Sales Analysis**
    - Identify the highest selling products in terms of total sales and quantity.
@@ -35,14 +34,14 @@ This repository contains an in-depth analysis of sales data, customer behavior, 
    - Evaluate the effectiveness of the current discount strategy.
    - Identify product categories or customer segments responding well to discounts.
 
- Recommendations
+ **Recommendations**
 
 Based on the analysis, actionable recommendations have been provided in each section to guide decision-making and strategy development.
 
- Usage
+ **Usage**
 
-1. Review the analysis sections and recommendations in the Jupyter Notebook file: `Sales_Business_Insights_Analysis.ipynb`.
-2. Explore the data dictionary and entity relationship diagram in the `Data_Dictionary_and_ERD` folder.
+1. Review the analysis sections and recommendations 
+2. Explore the data dictionary and entity relationship diagram in the Report file.
 3. Implement the recommended strategies in your business operations.
 
  Additional Resources
@@ -50,10 +49,8 @@ Based on the analysis, actionable recommendations have been provided in each sec
 - Data Dictionary and ERD: [Data Dictionary and ERD](https://drive.google.com/drive/folders/1K7ECtTcV5FOfRQDvZmxAEz0qd7auhXaY)
 - Raw Data: [Raw Data](link_to_raw_data)
 
- Feedback
+ **Feedback**
 
 Your feedback and suggestions for further analysis or improvements are highly appreciated. Feel free to open an issue or reach out via email.
 
----
 
-Feel free to customize it further based on your preferences or any specific details you'd like to include.
