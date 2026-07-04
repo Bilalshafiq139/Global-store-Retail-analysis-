@@ -1,6 +1,30 @@
 # SQL Workflow
 
-This folder contains the MySQL scripts for the Global Store analytics database and business queries.
+This folder contains the MySQL scripts for the **Global Store Retail Performance & Profitability Analysis** database and business queries.
+
+## Database Schema
+
+The SQL layer uses a four-table relational model with `customers`, `orders`, `products`, and `sales`.
+
+### MySQL Workbench ERD
+
+This is the original ERD exported from MySQL Workbench and should be treated as the implementation evidence for the database model.
+
+![MySQL Workbench ERD](../assets/schema/workbench_erd.png)
+
+### Clean Documentation ERD
+
+A simplified documentation version is also stored in this SQL folder for quick reference:
+
+![Database Schema](database_schema.svg)
+
+## Table Relationships
+
+| Relationship | Meaning |
+| --- | --- |
+| `customers.customer_id` -> `orders.customer_id` | One customer can place many orders |
+| `orders.order_id` -> `sales.order_id` | One order can contain many sales rows |
+| `products.product_id` -> `sales.product_id` | One product can appear in many sales rows |
 
 ## Run Order
 
