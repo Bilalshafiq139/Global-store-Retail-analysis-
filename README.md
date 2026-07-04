@@ -63,9 +63,9 @@ flowchart LR
 
 ## Database Schema
 
-The project uses a four-table MySQL model built around customers, orders, products, and sales.
+The project uses a four-table MySQL model built around customers, orders, products, and sales. The ERD below is the original implementation evidence exported from MySQL Workbench.
 
-![Database Schema](assets/schema/database_schema.svg)
+![MySQL Workbench ERD](assets/schema/workbench_erd.png)
 
 ## Tools Used
 
@@ -104,7 +104,7 @@ dashboard/power_bi_visuals.pdf
 
 | Asset | Location |
 | --- | --- |
-| Database schema / ERD | `assets/schema/database_schema.svg` |
+| MySQL Workbench ERD | `assets/schema/workbench_erd.png` |
 | Cleaned data and SQL-ready tables | `data/processed/` |
 | Data dictionary | `data/data_dictionary.md` |
 | Python data pipeline | `scripts/` |
