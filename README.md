@@ -110,6 +110,11 @@ Global-store-Retail-analysis-/
 |   +-- power_bi_visuals.pdf
 +-- assets/
 |   +-- screenshots/
+|   |   +-- dashboard_overview.png
+|   |   +-- sales_performance_page.png
+|   |   +-- profit_analysis_page.png
+|   |   +-- customer_segment_page.png
+|   |   +-- shipping_analysis_page.png
 |   |   +-- sql/
 |   +-- schema/
 +-- reports/
@@ -124,23 +129,25 @@ The dashboard is exported as:
 dashboard/power_bi_visuals.pdf
 ```
 
-Recommended screenshot files for GitHub preview:
+### Executive Overview
 
-| Dashboard View | Screenshot Path |
-| --- | --- |
-| Executive Overview | `assets/screenshots/dashboard_overview.png` |
-| Sales Performance | `assets/screenshots/sales_performance_page.png` |
-| Profitability Analysis | `assets/screenshots/profit_analysis_page.png` |
-| Customer Segment Analysis | `assets/screenshots/customer_segment_page.png` |
-| Shipping & Operations | `assets/screenshots/shipping_analysis_page.png` |
-
-Add the images below after exporting screenshots from Power BI:
-
-```md
 ![Executive Overview](assets/screenshots/dashboard_overview.png)
+
+### Sales Performance
+
+![Sales Performance](assets/screenshots/sales_performance_page.png)
+
+### Profitability Analysis
+
 ![Profitability Analysis](assets/screenshots/profit_analysis_page.png)
+
+### Customer Segment Analysis
+
 ![Customer Segment Analysis](assets/screenshots/customer_segment_page.png)
-```
+
+### Shipping & Operations
+
+![Shipping & Operations](assets/screenshots/shipping_analysis_page.png)
 
 ## SQL Analysis
 
