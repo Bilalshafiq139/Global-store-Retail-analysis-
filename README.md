@@ -61,6 +61,12 @@ flowchart LR
     E --> F[Business Recommendations]
 ```
 
+## Database Schema
+
+The project uses a four-table MySQL model built around customers, orders, products, and sales.
+
+![Database Schema](assets/schema/database_schema.svg)
+
 ## Tools Used
 
 | Tool | Role |
@@ -98,6 +104,7 @@ dashboard/power_bi_visuals.pdf
 
 | Asset | Location |
 | --- | --- |
+| Database schema / ERD | `assets/schema/database_schema.svg` |
 | Cleaned data and SQL-ready tables | `data/processed/` |
 | Data dictionary | `data/data_dictionary.md` |
 | Python data pipeline | `scripts/` |
