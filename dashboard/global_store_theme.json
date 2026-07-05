@@ -1,0 +1,124 @@
+{
+  "name": "Global Store Professional Theme",
+  "dataColors": [
+    "#1F4E79",
+    "#70AD47",
+    "#FFC000",
+    "#C00000",
+    "#5B9BD5",
+    "#A5A5A5",
+    "#4472C4",
+    "#ED7D31"
+  ],
+  "background": "#FFFFFF",
+  "foreground": "#1F1F1F",
+  "tableAccent": "#1F4E79",
+  "good": "#70AD47",
+  "neutral": "#FFC000",
+  "bad": "#C00000",
+  "visualStyles": {
+    "*": {
+      "*": {
+        "title": [
+          {
+            "show": true,
+            "fontColor": { "solid": { "color": "#1F1F1F" } },
+            "fontSize": 12,
+            "fontFamily": "Segoe UI Semibold"
+          }
+        ],
+        "background": [
+          {
+            "show": true,
+            "color": { "solid": { "color": "#FFFFFF" } },
+            "transparency": 0
+          }
+        ],
+        "border": [
+          {
+            "show": true,
+            "color": { "solid": { "color": "#E6E6E6" } },
+            "radius": 6
+          }
+        ],
+        "visualHeader": [
+          {
+            "show": false
+          }
+        ]
+      }
+    },
+    "card": {
+      "*": {
+        "labels": [
+          {
+            "color": { "solid": { "color": "#1F4E79" } },
+            "fontSize": 24,
+            "fontFamily": "Segoe UI Semibold"
+          }
+        ],
+        "categoryLabels": [
+          {
+            "show": true,
+            "color": { "solid": { "color": "#595959" } },
+            "fontSize": 10
+          }
+        ]
+      }
+    },
+    "clusteredBarChart": {
+      "*": {
+        "categoryAxis": [
+          {
+            "labelColor": { "solid": { "color": "#595959" } },
+            "titleColor": { "solid": { "color": "#595959" } }
+          }
+        ],
+        "valueAxis": [
+          {
+            "labelColor": { "solid": { "color": "#595959" } },
+            "titleColor": { "solid": { "color": "#595959" } }
+          }
+        ],
+        "dataPoint": [
+          {
+            "defaultColor": { "solid": { "color": "#1F4E79" } }
+          }
+        ]
+      }
+    },
+    "lineChart": {
+      "*": {
+        "categoryAxis": [
+          {
+            "labelColor": { "solid": { "color": "#595959" } },
+            "titleColor": { "solid": { "color": "#595959" } }
+          }
+        ],
+        "valueAxis": [
+          {
+            "labelColor": { "solid": { "color": "#595959" } },
+            "titleColor": { "solid": { "color": "#595959" } }
+          }
+        ]
+      }
+    },
+    "slicer": {
+      "*": {
+        "items": [
+          {
+            "fontColor": { "solid": { "color": "#1F1F1F" } },
+            "background": { "solid": { "color": "#FFFFFF" } }
+          }
+        ],
+        "header": [
+          {
+            "show": true,
+            "fontColor": { "solid": { "color": "#1F4E79" } },
+            "background": { "solid": { "color": "#F3F6FA" } }
+          }
+        ]
+      }
+    }
+  }
+}
