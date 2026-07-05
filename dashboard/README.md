@@ -1,13 +1,13 @@
 # Power BI Dashboard
 
-This folder stores the Power BI reporting assets for the Global Store Retail Performance & Profitability Analysis project. The dashboard is designed for business users who need to monitor sales, profit, margin leakage, discount risk, customer segments, and shipping performance.
+This folder stores the Power BI reporting documentation and exported dashboard assets for the Global Store Retail Performance & Profitability Analysis project. The dashboard is designed for business users who need to monitor sales, profit, margin leakage, discount risk, customer segments, and shipping performance.
 
 ## Dashboard Assets
 
 | File | Purpose |
 | --- | --- |
-| `power_bi_visuals.pdf` | Exported Power BI dashboard pages for portfolio review. |
-| `global_store_retail_dashboard.pbix` | Recommended name for the editable Power BI Desktop report file. Rename the uploaded PBIX to this name for consistency if it currently has a different name. |
+| `../Power_bi(dashboard).pbix` | Editable Power BI Desktop report file. |
+| `power_bi_visuals.pdf` | Exported Power BI dashboard pages for quick portfolio review. |
 | `dax_measures.md` | Documents the main DAX measures used in the report. |
 | `powerbi_build_guide.md` | Explains how to rebuild the dashboard manually in Power BI Desktop. |
 | `global_store_theme.json` | Optional Power BI theme for consistent professional formatting. |
@@ -22,9 +22,9 @@ This folder stores the Power BI reporting assets for the Global Store Retail Per
 | Customer Analysis | Segment and customer performance | Sales by segment, profit by segment, top customers, region-segment matrix |
 | Shipping & Operations | Operational performance | Ship mode cost, order priority, shipping cost by region, delivery days |
 
-## Recommended Dashboard Story
+## Dashboard Story
 
-The dashboard should tell this story:
+The dashboard tells this business story:
 
 1. Global Store has strong sales and meaningful profit.
 2. Sales should not be judged alone because some areas generate weak or negative margin.
@@ -45,8 +45,6 @@ Export these screenshots from Power BI and place them in `assets/screenshots/` s
 | `shipping_analysis_page.png` | Shipping & Operations | Shows shipping cost and operational performance. |
 
 ## Export Settings
-
-Recommended screenshot settings:
 
 | Setting | Recommendation |
 | --- | --- |
@@ -76,7 +74,7 @@ Recommended design rules:
 Before pinning this project, confirm:
 
 - The dashboard PDF opens correctly.
-- The editable PBIX file is included or clearly named.
+- The editable PBIX file opens correctly in Power BI Desktop.
 - All screenshots render correctly in the main README.
 - The dashboard uses the same KPI numbers as the SQL output and README.
 - The DAX measures are documented in `dax_measures.md`.
