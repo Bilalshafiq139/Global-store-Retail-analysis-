@@ -1,4 +1,4 @@
-# Global Store Retail Performance & Profitability Analysis
+# Retail Performance & Profitability Dashboard
 
 ![Python](https://img.shields.io/badge/Python-Data%20Preparation-blue)
 ![MySQL](https://img.shields.io/badge/MySQL-Business%20Analysis-orange)
