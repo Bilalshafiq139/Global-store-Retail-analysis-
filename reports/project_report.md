@@ -32,6 +32,20 @@ Kaggle URL: https://www.kaggle.com/datasets/apoorvaappz/global-super-store-datas
 | Order table | `data/processed/orders.csv` |
 | Sales table | `data/processed/sales.csv` |
 
+## Delivery Workflow
+
+This solution follows a practical business intelligence workflow:
+
+```mermaid
+flowchart TD
+    A[Kaggle Dataset] --> B[Python Cleaning]
+    B --> C[Cleaned CSV Tables]
+    C --> D[MySQL Database]
+    D --> E[SQL Business Analysis]
+    E --> F[Power BI Dashboard]
+    F --> G[Business Recommendations]
+```
+
 ## Python Data Preparation
 
 Python handles the data preparation layer:
@@ -85,12 +99,6 @@ SQL files:
 | `07_shipping_analysis.sql` | Shipping and operational cost checks |
 | `08_seasonality_analysis.sql` | Month and quarter trends |
 
-SQL screenshots:
-
-```text
-assets/screenshots/sql/
-```
-
 ## Power BI Reporting Layer
 
 Power BI turns the SQL/Python outputs into management views.
@@ -103,21 +111,14 @@ Power BI turns the SQL/Python outputs into management views.
 | Customer Analysis | Segment contribution, top customers, and region-segment performance |
 | Shipping & Operations | Ship mode cost, delivery days, order priority, and shipping impact |
 
-Dashboard export:
+Dashboard assets:
 
-```text
-dashboard/power_bi_visuals.pdf
-```
-
-Dashboard screenshot set:
-
-| View | File |
+| Asset | File |
 | --- | --- |
-| Executive overview | `assets/screenshots/dashboard_overview.png` |
-| Sales performance | `assets/screenshots/sales_performance_page.png` |
-| Profit analysis | `assets/screenshots/profit_analysis_page.png` |
-| Customer segment analysis | `assets/screenshots/customer_segment_page.png` |
-| Shipping analysis | `assets/screenshots/shipping_analysis_page.png` |
+| Editable Power BI report | `Power_bi(dashboard).pbix` |
+| Exported dashboard PDF | `dashboard/power_bi_visuals.pdf` |
+| DAX documentation | `dashboard/dax_measures.md` |
+| Dashboard screenshots | `assets/screenshots/` |
 
 ## Findings
 
@@ -160,34 +161,22 @@ Consumer customers generate the most revenue. Home Office has the strongest marg
 | 5 | Build segment campaigns around Consumer scale and Home Office margin | Improve customer value and retention |
 | 6 | Keep Power BI KPI monitoring active for sales, profit, and margin | Make performance issues visible earlier |
 
-## Screenshot Checklist
+## Deliverables
 
-Use these screenshots when presenting the project:
-
-| Section | Screenshot Folder |
+| Deliverable | Location |
 | --- | --- |
-| Power BI dashboard | `assets/screenshots/` |
-| SQL data checks | `assets/screenshots/sql/02_data_cleaning/` |
-| SQL KPI results | `assets/screenshots/sql/03_kpi_queries/` |
-| SQL sales outputs | `assets/screenshots/sql/04_sales_analysis/` |
-| SQL profit outputs | `assets/screenshots/sql/05_profit_analysis/` |
-| SQL customer outputs | `assets/screenshots/sql/06_customer_segment_analysis/` |
-| SQL shipping outputs | `assets/screenshots/sql/07_shipping_analysis/` |
-| SQL seasonality outputs | `assets/screenshots/sql/08_seasonality_analysis/` |
-
-## Project Positioning
-
-This project shows the full analytics workflow:
-
-- Python data preparation.
-- MySQL database design and business querying.
-- Power BI dashboard reporting.
-- Data quality checks.
-- KPI measurement.
-- Business actions backed by sales, profit, discount, customer, shipping, and seasonal analysis.
+| Cleaned data | `data/processed/` |
+| MySQL scripts | `sql/` |
+| Power BI dashboard | `Power_bi(dashboard).pbix` |
+| Dashboard PDF | `dashboard/power_bi_visuals.pdf` |
+| Dashboard screenshots | `assets/screenshots/` |
+| DAX measures | `dashboard/dax_measures.md` |
+| Business impact summary | `reports/business_impact.md` |
+| Skills demonstrated | `docs/skills_demonstrated.md` |
 
 ## Caveats
 
 - The dataset covers 2011-2014 transactions.
-- The editable Power BI `.pbix` file is not included in the current repository.
 - The dataset source and usage terms belong to the Kaggle dataset owner.
+- The analysis does not include inventory cost, supplier contracts, marketing spend, or customer acquisition cost.
+- Impact statements are business scenarios based on available data, not measured post-implementation outcomes.
