@@ -5,7 +5,7 @@
 ![Power BI](https://img.shields.io/badge/Power%20BI-Executive%20Dashboard-yellow)
 ![Status](https://img.shields.io/badge/Portfolio%20Project-Completed-brightgreen)
 
-Business analytics case study using **Python, MySQL, and Power BI** to analyze global retail transactions, identify revenue drivers, detect profit leakage, measure discount risk, and recommend actions for profitable growth.
+End-to-end retail analytics project using **Python, MySQL, and Power BI** to analyze **51K+ global transaction records**, identify revenue drivers, detect profit leakage, measure discount risk, and build an executive dashboard for commercial decision-making.
 
 ![Executive Dashboard](assets/screenshots/dashboard_overview.png)
 
@@ -40,7 +40,7 @@ This project answers one practical management question:
 
 ## Recommended Business Actions
 
-| Priority | Action | Business Rationale | Estimated Business Impact Scenario |
+| Priority | Action | Business Rationale | Expected Business Impact Scenario |
 | ---: | --- | --- | --- |
 | 1 | Review pricing, supplier cost, and discounting for Tables | Tables creates meaningful sales but negative profit | Reducing recurring losses in Tables could directly improve category-level margin quality |
 | 2 | Add control rules for discounts above 30% | Deep discounts are linked with negative margin | Lowering excessive discount exposure could improve gross margin and reduce unprofitable sales |
@@ -73,8 +73,19 @@ The project uses a four-table MySQL model built around customers, orders, produc
 | --- | --- |
 | Python | Data cleaning, transformation, feature creation, and CSV exports |
 | MySQL | Relational schema, data loading, quality checks, KPI queries, and business analysis |
-| Power BI | Executive dashboard pages, KPI cards, trend visuals, and business reporting |
+| Power BI | Executive dashboard pages, KPI cards, trend visuals, DAX measures, and business reporting |
 | CSV / Excel | Source data handling and structured exports |
+| GitHub | Project documentation and portfolio presentation |
+
+## Power BI Dashboard
+
+| Asset | Location | Purpose |
+| --- | --- | --- |
+| Editable Power BI file | `Power_bi(dashboard).pbix` | Opens the full report in Power BI Desktop |
+| Exported dashboard PDF | `dashboard/power_bi_visuals.pdf` | Quick portfolio review without opening Power BI |
+| DAX documentation | `dashboard/dax_measures.md` | Explains KPI, margin, loss, and time-intelligence measures |
+| Dashboard build guide | `dashboard/powerbi_build_guide.md` | Explains how the dashboard can be rebuilt |
+| Power BI theme | `dashboard/global_store_theme.json` | Optional professional theme file |
 
 ## Dashboard Preview
 
@@ -82,6 +93,12 @@ The exported Power BI dashboard is available at:
 
 ```text
 dashboard/power_bi_visuals.pdf
+```
+
+The editable Power BI report is available at:
+
+```text
+Power_bi(dashboard).pbix
 ```
 
 ### Sales Performance
@@ -110,10 +127,14 @@ dashboard/power_bi_visuals.pdf
 | Python data pipeline | `scripts/` |
 | SQL analysis files | `sql/` |
 | Notebook analysis | `notebooks/` |
+| Editable Power BI file | `Power_bi(dashboard).pbix` |
 | Power BI export | `dashboard/power_bi_visuals.pdf` |
 | Business report | `reports/project_report.md` |
 | Executive summary | `reports/executive_summary.md` |
+| Business impact summary | `reports/business_impact.md` |
 | SQL execution summary | `reports/sql_execution_summary.md` |
+| Skills demonstrated | `docs/skills_demonstrated.md` |
+| Reproducibility guide | `docs/reproducibility_guide.md` |
 
 ## Finding-to-Evidence Map
 
@@ -153,11 +174,11 @@ Kaggle: https://www.kaggle.com/datasets/apoorvaappz/global-super-store-dataset
 - The dataset covers historical transactions from 2011 to 2014.
 - The analysis is based on transaction-level retail data and does not include inventory cost, supplier contracts, marketing spend, or customer acquisition cost.
 - Recommendations require operational validation before implementation.
-- The editable Power BI `.pbix` file is not currently included; the exported dashboard PDF and screenshots are included instead.
+- Impact statements are business scenarios based on available data, not measured post-implementation outcomes.
 
 ## Portfolio Positioning
 
-This project demonstrates practical data analyst skills: Python data preparation, SQL business analysis, Power BI reporting, KPI design, margin analysis, and commercial recommendation building.
+This project demonstrates practical data analyst and BI analyst skills: Python data preparation, SQL business analysis, Power BI reporting, DAX measure documentation, KPI design, margin analysis, dashboard storytelling, and commercial recommendation building.
 
 ## Owner
 
