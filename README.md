@@ -61,12 +61,6 @@ flowchart LR
     E --> F[Business Recommendations]
 ```
 
-## Database Schema
-
-The project uses a four-table MySQL model built around customers, orders, products, and sales. The ERD below is the original implementation evidence exported from MySQL Workbench.
-
-![MySQL Workbench ERD](assets/schema/workbench_erd.png)
-
 ## Tools Used
 
 | Tool | Role |
@@ -77,29 +71,34 @@ The project uses a four-table MySQL model built around customers, orders, produc
 | CSV / Excel | Source data handling and structured exports |
 | GitHub | Project documentation and portfolio presentation |
 
+## Database Schema
+
+The project uses a four-table MySQL model built around customers, orders, products, and sales. The ERD below is the original implementation evidence exported from MySQL Workbench.
+
+![MySQL Workbench ERD](assets/schema/workbench_erd.png)
+
 ## Power BI Dashboard
 
 | Asset | Location | Purpose |
 | --- | --- | --- |
 | Editable Power BI file | `Power_bi(dashboard).pbix` | Opens the full report in Power BI Desktop |
 | Exported dashboard PDF | `dashboard/power_bi_visuals.pdf` | Quick portfolio review without opening Power BI |
+| Dashboard screenshots | `assets/screenshots/` | README-ready visual proof of dashboard pages |
 | DAX documentation | `dashboard/dax_measures.md` | Explains KPI, margin, loss, and time-intelligence measures |
 | Dashboard build guide | `dashboard/powerbi_build_guide.md` | Explains how the dashboard can be rebuilt |
 | Power BI theme | `dashboard/global_store_theme.json` | Optional professional theme file |
 
+## Dashboard Pages
+
+| Page | Business Purpose | Screenshot |
+| --- | --- | --- |
+| Executive Overview | Monitor sales, profit, margin, orders, customers, and overall performance | `assets/screenshots/dashboard_overview.png` |
+| Sales Performance | Identify revenue drivers across categories, products, regions, and markets | `assets/screenshots/sales_performance_page.png` |
+| Profitability Analysis | Detect margin leakage, loss-making products, and discount risk | `assets/screenshots/profit_analysis_page.png` |
+| Customer Segment Analysis | Compare customer segment contribution and customer value | `assets/screenshots/customer_segment_page.png` |
+| Shipping & Operations | Monitor shipping cost, ship mode, priority, and operational performance | `assets/screenshots/shipping_analysis_page.png` |
+
 ## Dashboard Preview
-
-The exported Power BI dashboard is available at:
-
-```text
-dashboard/power_bi_visuals.pdf
-```
-
-The editable Power BI report is available at:
-
-```text
-Power_bi(dashboard).pbix
-```
 
 ### Sales Performance
 
@@ -129,6 +128,7 @@ Power_bi(dashboard).pbix
 | Notebook analysis | `notebooks/` |
 | Editable Power BI file | `Power_bi(dashboard).pbix` |
 | Power BI export | `dashboard/power_bi_visuals.pdf` |
+| Dashboard screenshots | `assets/screenshots/` |
 | Business report | `reports/project_report.md` |
 | Executive summary | `reports/executive_summary.md` |
 | Business impact summary | `reports/business_impact.md` |
