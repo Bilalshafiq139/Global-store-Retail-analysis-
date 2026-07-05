@@ -1,44 +1,60 @@
 # Power BI Dashboard
 
-This folder stores the exported Power BI reporting package for the Global Store Retail Performance & Profitability Analysis project.
+This folder stores the Power BI reporting assets for the Global Store Retail Performance & Profitability Analysis project. The dashboard is designed for business users who need to monitor sales, profit, margin leakage, discount risk, customer segments, and shipping performance.
 
-## Included Dashboard File
+## Dashboard Assets
 
-| File | Use |
+| File | Purpose |
 | --- | --- |
-| `power_bi_visuals.pdf` | Exported Power BI dashboard pages for portfolio review |
-
-## Editable PBIX File
-
-The editable `.pbix` file is not currently included in this repository. For portfolio review, the exported PDF and dashboard screenshots are used as the visible evidence of the Power BI work.
-
-Recommended file name if the editable report is later added:
-
-```text
-global_store_retail_dashboard.pbix
-```
+| `power_bi_visuals.pdf` | Exported Power BI dashboard pages for portfolio review. |
+| `global_store_retail_dashboard.pbix` | Recommended name for the editable Power BI Desktop report file. Rename the uploaded PBIX to this name for consistency if it currently has a different name. |
+| `dax_measures.md` | Documents the main DAX measures used in the report. |
+| `powerbi_build_guide.md` | Explains how to rebuild the dashboard manually in Power BI Desktop. |
+| `global_store_theme.json` | Optional Power BI theme for consistent professional formatting. |
 
 ## Dashboard Pages
 
 | Page | Business Focus | Main Visuals |
 | --- | --- | --- |
-| Executive Overview | Overall business performance | KPI cards, sales trend, profit trend, margin summary |
-| Sales Analysis | Revenue drivers | Sales by category, sub-category, region, market, and top products |
-| Profitability Analysis | Margin leakage | Profit by category, loss-making products, discount impact, profit margin |
-| Customer Analysis | Customer and segment performance | Sales by segment, profit by segment, top customers, region-segment matrix |
-| Shipping & Operations | Operational cost monitoring | Ship mode cost, order priority, shipping cost by region, delivery days |
+| Executive Overview | Overall business health | KPI cards, sales trend, profit trend, margin summary, category overview |
+| Sales Analysis | Revenue drivers | Sales by category, sub-category, region, market, country, and top products |
+| Profitability Analysis | Margin leakage | Profit by category, loss-making products, discount impact, profit margin, sales vs profit comparison |
+| Customer Analysis | Segment and customer performance | Sales by segment, profit by segment, top customers, region-segment matrix |
+| Shipping & Operations | Operational performance | Ship mode cost, order priority, shipping cost by region, delivery days |
 
-## Recommended Screenshots for README
+## Recommended Dashboard Story
 
-Export these images from Power BI and place them in `assets/screenshots/`:
+The dashboard should tell this story:
 
-| Screenshot | Purpose |
+1. Global Store has strong sales and meaningful profit.
+2. Sales should not be judged alone because some areas generate weak or negative margin.
+3. Tables, deep discounts, and Southeast Asia are the main areas that need management review.
+4. Technology is the strongest profitable growth category.
+5. Consumer drives revenue scale, while Home Office has stronger margin quality.
+
+## Screenshot Export Requirements
+
+Export these screenshots from Power BI and place them in `assets/screenshots/` so they render properly in the main README.
+
+| Screenshot | Source Page | Purpose |
+| --- | --- | --- |
+| `dashboard_overview.png` | Executive Overview | Shows executive KPIs and overall business health. |
+| `sales_performance_page.png` | Sales Analysis | Shows revenue drivers by category, product, and geography. |
+| `profit_analysis_page.png` | Profitability Analysis | Shows margin leakage, discount risk, and loss-making areas. |
+| `customer_segment_page.png` | Customer Analysis | Shows segment and customer contribution. |
+| `shipping_analysis_page.png` | Shipping & Operations | Shows shipping cost and operational performance. |
+
+## Export Settings
+
+Recommended screenshot settings:
+
+| Setting | Recommendation |
 | --- | --- |
-| `dashboard_overview.png` | Shows executive KPIs and overall business health |
-| `sales_performance_page.png` | Shows revenue drivers by category, product, and geography |
-| `profit_analysis_page.png` | Shows margin leakage, discount risk, and loss-making areas |
-| `customer_segment_page.png` | Shows segment and customer contribution |
-| `shipping_analysis_page.png` | Shows shipping cost and operational performance |
+| Canvas ratio | 16:9 |
+| Screenshot format | PNG |
+| Minimum width | 1600 px |
+| File naming | Use exact filenames listed above |
+| GitHub location | `assets/screenshots/` |
 
 ## Dashboard Design Standard
 
@@ -52,3 +68,16 @@ Recommended design rules:
 4. Keep page titles business-focused.
 5. Avoid unnecessary decorative visuals.
 6. Use filters for year, region, category, segment, and market.
+7. Use consistent colors and formatting across pages.
+8. Export the PDF and screenshots after every major dashboard revision.
+
+## Final Portfolio Checklist
+
+Before pinning this project, confirm:
+
+- The dashboard PDF opens correctly.
+- The editable PBIX file is included or clearly named.
+- All screenshots render correctly in the main README.
+- The dashboard uses the same KPI numbers as the SQL output and README.
+- The DAX measures are documented in `dax_measures.md`.
+- The dashboard supports the findings in `reports/business_impact.md`.
