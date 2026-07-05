@@ -1,135 +1,116 @@
-# Methodology
+# Project Delivery Approach
 
-## Research Design
+This document explains how the Global Store retail analytics solution was delivered from raw data to business-ready reporting.
 
-This project follows an applied business analytics case study design. The objective is not only to describe sales performance, but to evaluate whether revenue growth is supported by healthy profitability across products, regions, customer segments, discounts, and shipping operations.
+## Delivery Objective
 
-The analysis uses a descriptive and diagnostic analytics approach:
+The objective was to build a practical business intelligence solution that helps a retail management team understand:
 
-- Descriptive analytics explains what happened in sales, profit, customers, products, regions, and shipping.
-- Diagnostic analytics investigates where profit leakage appears and which business factors may be associated with weak margins.
+- where revenue is coming from
+- which products and regions are profitable
+- where margin leakage is happening
+- how discounts affect profitability
+- how customer segments contribute to sales and profit
+- how shipping and order priority affect operational performance
 
-## Main Research Question
+The focus is commercial decision-making, not academic reporting.
 
-Where is Global Store generating profitable growth, and where is revenue being created without sufficient profit?
+## Core Business Question
 
-## Supporting Analytical Questions
+Where is Global Store generating profitable growth, and where is revenue being created without enough profit?
 
-| Area | Analytical Question |
+## Business Questions Covered
+
+| Area | Business Question |
 | --- | --- |
-| Executive KPIs | What are the overall sales, profit, quantity, orders, customers, and profit margin? |
+| Executive KPIs | What are total sales, profit, orders, customers, quantity, and profit margin? |
 | Product Performance | Which categories and sub-categories generate the strongest sales and profit? |
-| Profit Leakage | Which products or sub-categories generate revenue but reduce profit? |
-| Discounting | How does discount level relate to profit margin? |
-| Regional Performance | Which regions or markets have high sales but weak profit quality? |
+| Profit Leakage | Which products or sub-categories create revenue but reduce profit? |
+| Discounting | How does discount level affect margin quality? |
+| Regional Performance | Which regions or markets have high sales but weak profit? |
 | Customer Segments | Which customer segments contribute most to revenue and profit? |
 | Shipping Operations | Which shipping modes and priorities carry higher operational cost? |
 | Seasonality | Which months and quarters show stronger sales and profit patterns? |
 
-## Dataset Selection
+## Data Preparation Workflow
 
-The project uses the Global Super Store Dataset from Kaggle. The dataset contains historical retail transaction records with order details, customer information, product hierarchy, geographic fields, sales, quantity, discount, profit, shipping cost, and order priority.
+Python was used to prepare the raw retail dataset before loading it into the reporting workflow.
 
-The dataset is suitable for a data analytics portfolio project because it supports multiple business analysis dimensions:
+Main steps:
 
-- revenue analysis
-- profitability analysis
-- product analysis
-- customer segment analysis
-- geographic analysis
-- discount and margin analysis
-- shipping and operational analysis
-- time-based performance analysis
-
-## Data Preparation Method
-
-The data preparation stage is handled in Python. The preparation script standardizes column names, converts date and numeric fields, creates analytical features, and exports SQL-ready tables.
-
-Main preparation steps:
-
-1. Load the raw CSV file.
-2. Standardize column names for consistent analysis.
-3. Convert order and shipping dates into date fields.
+1. Load the raw Global Super Store dataset.
+2. Standardize column names for clean analysis.
+3. Convert order dates and shipping dates into date fields.
 4. Convert sales, profit, quantity, discount, shipping cost, and postal code into numeric fields.
-5. Create derived fields such as shipping days, year, month, quarter, and profit margin.
+5. Create business-ready fields such as shipping days, year, month, quarter, and profit margin.
 6. Export a cleaned transaction-level dataset.
-7. Create normalized CSV tables for MySQL loading.
-8. Generate a data quality report for validation.
+7. Export SQL-ready tables for customers, orders, products, and sales.
 
-## Database Design Method
+## Data Model
 
-The SQL layer uses a simplified star-style relational model with four core tables:
+The MySQL layer uses four core tables:
 
 | Table | Role |
 | --- | --- |
-| customers | Stores customer identity and segment fields. |
-| products | Stores product hierarchy and product names. |
-| orders | Stores order-level dates, geography, shipping, market, region, and priority fields. |
-| sales | Stores transaction-line facts: sales, quantity, discount, profit, and shipping cost. |
+| customers | Customer identity and segment details. |
+| products | Product hierarchy and product names. |
+| orders | Order dates, shipping details, geography, market, region, and priority. |
+| sales | Transaction-level sales, quantity, discount, profit, and shipping cost. |
 
-The database design separates descriptive dimensions from transaction facts, which makes the project closer to a real business intelligence workflow.
+This structure supports business reporting and keeps the analysis organized around customers, products, orders, and sales performance.
 
-## SQL Analysis Strategy
+## Analysis Workflow
 
-SQL is used for structured business analysis and validation. The SQL workflow is divided into separate scripts so the logic is reviewable and repeatable.
+SQL was used to validate and analyze the data through separate business-focused scripts.
 
-| Script Area | Purpose |
+| Script Area | Business Purpose |
 | --- | --- |
-| Schema | Creates database tables, keys, and relationships. |
-| Data Loading Notes | Documents CSV loading and expected row counts. |
-| Data Cleaning | Performs quality checks and creates the joined reporting view. |
-| KPI Queries | Calculates executive-level metrics. |
-| Sales Analysis | Identifies sales drivers by category, product, region, market, and month. |
-| Profit Analysis | Identifies profit leakage, loss-making products, and discount impact. |
-| Customer Segment Analysis | Reviews segment contribution and top customers. |
-| Shipping Analysis | Reviews shipping mode, shipping cost, delivery time, and order priority. |
-| Seasonality Analysis | Reviews monthly and quarterly sales and profit patterns. |
+| Schema | Creates the database structure and relationships. |
+| Loading Notes | Documents table loading and row-count validation. |
+| Data Checks | Confirms data quality before reporting. |
+| KPI Queries | Calculates executive metrics. |
+| Sales Analysis | Identifies revenue drivers by product, category, region, market, and time. |
+| Profit Analysis | Identifies margin leakage, loss-making products, and discount risk. |
+| Customer Analysis | Reviews customer segment and top-customer performance. |
+| Shipping Analysis | Reviews shipping cost, ship mode, priority, and delivery performance. |
+| Seasonality Analysis | Reviews month and quarter performance patterns. |
 
-## Dashboard Design Strategy
+## Dashboard Delivery
 
-Power BI is used to convert analysis outputs into management-facing reporting. The dashboard is designed around executive decision-making rather than decorative visualization.
+Power BI was used to turn the analysis into a management-facing dashboard.
 
-Dashboard pages:
-
-| Page | Purpose |
+| Dashboard Page | Business Use |
 | --- | --- |
-| Executive Overview | Provides high-level KPIs and trend monitoring. |
-| Sales Analysis | Shows sales drivers across categories, products, regions, and markets. |
-| Profitability Analysis | Highlights margin quality, loss-making products, and discount risk. |
-| Customer Analysis | Compares customer segments and high-value customers. |
-| Shipping & Operations | Reviews shipping cost, order priority, and delivery performance. |
+| Executive Overview | Track sales, profit, margin, orders, customers, and overall performance. |
+| Sales Performance | Identify revenue drivers by product, category, region, and market. |
+| Profitability Analysis | Detect loss-making areas, discount risk, and weak-margin products. |
+| Customer Segment Analysis | Compare customer segment contribution and customer value. |
+| Shipping & Operations | Monitor shipping cost, order priority, and operational performance. |
 
 ## Validation Approach
 
-The project includes multiple validation layers:
+The solution includes practical validation checks:
 
-- Python row-count checks after data preparation.
-- Data quality report generated during the Python pipeline.
-- MySQL row-count validation after loading CSV tables.
-- SQL quality checks before creating the main reporting view.
-- Consistency checks between README KPIs, SQL outputs, and dashboard visuals.
-- Screenshot evidence for SQL outputs and Power BI pages.
+- Python preparation checks.
+- MySQL row-count validation.
+- SQL quality checks before reporting.
+- Consistency checks between SQL KPIs, Power BI visuals, README figures, and report findings.
+- Dashboard screenshots and exported PDF for review.
+- Editable PBIX file included for Power BI inspection.
 
-## Interpretation Method
+## Interpretation Rules
 
-The analysis avoids treating sales as the only success metric. Each major finding is interpreted using both revenue and profit. A product, category, or region is considered strong only if it contributes meaningful sales and acceptable margin quality.
-
-The project also separates evidence from recommendation:
-
-- Evidence comes from SQL outputs, Python analysis, and dashboard visuals.
-- Recommendations are business actions based on observed patterns.
-- Impact statements are scenario-based and should not be treated as measured post-implementation results.
+The analysis does not treat revenue as the only success metric. Each major finding is reviewed through both sales and profit. A product, category, region, or segment is considered strong only when sales volume is supported by acceptable profitability.
 
 ## Limitations
 
-- The dataset covers historical transactions from 2011 to 2014, so findings may not reflect current retail behavior.
+- The dataset covers historical transactions from 2011 to 2014.
 - Product cost breakdown, supplier contracts, inventory cost, marketing spend, and customer acquisition cost are not available.
 - Profit is accepted as provided in the dataset and is not independently audited.
 - Shipping cost impact is analyzed descriptively, not causally.
 - The discount-profit relationship shows association, not guaranteed causation.
-- Country and region performance may be affected by different product mix, discounting, and operational conditions.
-- The project uses an exported dashboard PDF and screenshots; the editable Power BI file is not currently included.
+- Country and region performance may be affected by product mix, discounting, and operational conditions.
 
-## Conclusion
+## Delivery Outcome
 
-The methodology is designed to demonstrate a complete analytics workflow: data preparation, relational modeling, SQL analysis, dashboard reporting, and evidence-based business recommendations. The central focus is profitable growth, not revenue growth alone.
+The final deliverables include cleaned data, SQL-ready tables, MySQL analysis scripts, Power BI dashboard pages, DAX documentation, dashboard screenshots, exported PDF, editable PBIX file, and business recommendations.
